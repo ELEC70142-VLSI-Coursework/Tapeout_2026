@@ -1,0 +1,26 @@
+@charset "UTF-8";
+#heading1 {
+    font-family: Arial;
+    font-weight: bold;
+    color: #0448A2;
+    font-size: x-large;
+}
+#heading2 {
+    font-family: Arial;
+    font-weight: bold;
+    color: #000000;
+    font-size: medium;
+    padding-left: 10px;
+	padding-right: 10px;
+}
+body {
+    font-family: Arial;
+}
+
+bullet {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
