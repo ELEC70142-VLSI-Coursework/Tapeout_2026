@@ -12,342 +12,61 @@
 <img src="logo.jpg" width="180" height="60" alt="">	
 	<header id="heading1">
 	  <h5>&nbsp;Department of Electrical &amp; Electronic Engineering</h5>
-	  <p>&nbsp;ELEC70142 Digital VLSI (SoC) Design - &nbsp;Autumn Term 2025 (Oct - Dec)</p>
+	  <p>&nbsp;ELEC70142 Digital VLSI (SoC) Design - &nbsp;TAPEOUT 2026</p>
 	  <h5>&nbsp;<a href="mailto:p.cheung@imperial.ac.uk">Professor Peter Y. K. Cheung</a></h5>
+	</header>&nbsp; 
+	<img src="banner1.jpg" width="1000" height="148" alt=""/><br><br>
+<font size="+1" face="Arial, Helvetica, sans-serif">Background </font><br><br>
+	<font size="+0" face="Arial, Helvetica, sans-serif"> 
+I delivered this new module to our MEng Year 4 students, at Masters level, between October 2025 and mid-January 2026. This was a limited capacity, elective, and selective module, with 32 students on the course. Students formed 8 groups of 4 and produced 8 individual designs. 
+Students used Cadence tools throughout, including Genus for synthesis, Innovus for placement and routing, Virtuoso for layout editing and viewing, Xcelium for simulation,  Calibre for verification, and Modus for design-for-test and ATPG.  All 8 chips were designed for TSMC 65nm CMOS low power process.  
+Each team was provided with a custom designed PLL operating with a 25MHz external clock and a maximum internal clock frequency of 300MHz.
+Available silicon area is 1mm x 1mm in a 44 pin JLCC packaging. All chips were designed to be easily testable via a purpose-designed test rig hooked up to one or two FPGA boards (which drive and/or emulate the chip under test). 
+The following pages provide brief descriptions and the layout for all 8 designs.
+All eight designs have been taped out at the end of February via EuroPractice/IMEC. The fabricated chips are returned to us at the beginning of June for testing. A one-day seminar will be held on June 18th 2026 when each team will present their design and the test results. </font><br><br>
 
-	</header>
-<br>&nbsp; <img src="banner1.jpg" width="1000" height="148" alt=""/>
-<h3>COURSE SCHEDULE &amp; CONTENTS</h3>
-	
-<table width="1024" border="2">
-  <tbody>
-    <tr>
-      <th scope="col" width="100" align="cener">Week starting</th>
-      <th scope="col" width="330" align="cener">Sessions&nbsp;</th>
-      <th scope="col" width="360" align="cener">Resources&nbsp;</th>
-	</tr>
-    <tr>
-      	<td>  <center>
-      	<strong>29 Sep</strong>
-      	</center><br>  
-		</td>
-      	<td><br>
-		<center><strong>Lecture 1 - Introduction</strong>
-		</center><br> 
-		  	<center><a href="1 - Introduction (slides).pdf"><img src="slides_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;
-			
-			<a href="https://imperial.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=796f87c5-b108-4d02-a016-b34e00d64db1"><img src="tape_icon.jpg" width="40" height="35" alt=""></a>&nbsp;&nbsp; (1st half)
-			</center><br>
-			<center><strong>Lecture 2 - Design Flow</strong>
-			</center><br> 
-		  	<center><a href="2 - Design Flow (slides).pdf"><img src="slides_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;
-			<a href="2 - Design Flow (notes).pdf"><img src="notes_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;
-			<a href="https://imperial.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=796f87c5-b108-4d02-a016-b34e00d64db1"><img src="tape_icon.jpg" width="40" height="35" alt=""></a>&nbsp;&nbsp;(2nd half)
-			</center><br>
-			<center><strong>Lab 1 - Quick start with Cadence</strong>&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="https://github.com/ELEC70142-VLSI-Coursework/Lab_1"><img src="github_icon.png" width="40" height="40" alt=""></a>&nbsp;&nbsp;
-			</center><br>
-	  </td>
-      	<td>
-			<ul><li><p><strong>Git &amp; Github in 30 minutes&nbsp;&nbsp;<a href="https://www.youtube.com/watch?v=jG4Vs81kMlc&t=16s"><img src="video_icon.png" width="30" height="30" alt="" align="center"></a></strong></p></li></ul>
-			<ul><li><p><strong>Markdown Crash Course&nbsp;&nbsp;<a href="https://www.youtube.com/watch?v=HUBNt18RFbo&t=309s"><img src="video_icon.png" width="30" height="30" alt="" align="center"></a></strong></p></li></ul>
-			<ul><li><p><strong>Markdown Cheatsheet&nbsp;&nbsp;<a href="https://www.markdownguide.org/cheat-sheet/"><img src="weblink_icon.png" width="30" height="30" alt="" align="center"></a></strong></p></li></ul>
-			<ul><li><p><strong>Git Cheatsheet&nbsp;&nbsp;<a href="https://education.github.com/git-cheat-sheet-education.pdf"><img src="pdf_icon.png" width="30" height="30" alt="" align="center"></a></strong></p></li></ul>
-			<ul><li><p><strong>Roadmap for Devices and Systems&nbsp;&nbsp;<a href="https://irds.ieee.org/images/files/pdf/2023/2023IRDS_Perspectives.pdf"><img src="weblink_icon.png" width="30" height="30" alt="" align="center"></a></strong></p></li></ul>
-			<ul><li><p><strong>NDA Form - TSMC&nbsp;&nbsp;<a href="TSMC 65nm NDA.pdf"><img src="pdf_icon.png" width="30" height="30" alt="" align="center"></a></strong></p></li></ul>
-			<ul><li><p><strong>NDA Form - EuroPractice and TSMC&nbsp;&nbsp;<a href="TSMC 3w_NDA_AppA.pdf"><img src="pdf_icon.png" width="30" height="30" alt="" align="center"></a></strong></p></li></ul>
-	  </td>
-	 </tr>
-	  
-    <tr>
-      	<td>  <center>
-      	<strong>6 Oct</strong>
-      	</center><br>  
-		</td>
-      	<td><br>
-		<center><strong>Lecture 3 - Fabrication Process</strong>
-		</center><br> 
-		  	<center><a href="3 - Fabrication Process (slides).pdf"><img src="slides_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;			
-			<a href="3 - Fabrication Process (notes).pdf"><img src="notes_icon.jpg" width="35" height="35" alt=""></a>&nbsp;
-			<a href="https://imperial.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f0716124-92d6-4313-84a2-b34e00d64eba"><img src="tape_icon.jpg" width="40" height="35" alt=""></a>&nbsp;&nbsp;(1st half)
-			</center><br>
-			<center><strong>Lecture 4 - CMOS Inverter &amp; Layout Design</strong>
-			</center><br> 
-		  	<center><a href="4 - Layout (slides).pdf"><img src="slides_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;
-			<a href="4 - Layout (notes).pdf"><img src="notes_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;
-			<a href="https://imperial.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f0716124-92d6-4313-84a2-b34e00d64eba"><img src="tape_icon.jpg" width="40" height="35" alt=""></a>&nbsp;&nbsp;(2nd half)
-			</center><br>
-			<center><strong>Lab 2 (part 1) - Understanding Layout</strong>&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="https://github.com/ELEC70142-VLSI-Coursework/Lab_2"><img src="github_icon.png" width="40" height="40" alt=""></a>&nbsp;&nbsp;
-			</center><br>
-	  </td>
-      	<td>
-			<ul><li><p><strong>Approximate Design Rules&nbsp;&nbsp;<a href="TSMC_65nm_Basic_Design_Rules.pdf"><img src="PDF_icon.png" width="30" height="30" alt="" align="center"></a></strong></p></li></ul>
-			<ul><li><p><strong>How are chips made?&nbsp;&nbsp;<a href="https://www.youtube.com/watch?v=IkRXpFIRUl4"><img src="video_icon.png" width="30" height="30" alt="" align="center"></a></strong></p></li></ul>
-			<ul><li><p><strong>Photolithography&nbsp;&nbsp;<a href="https://www.youtube.com/watch?v=TjpbrLTem3M"><img src="video_icon.png" width="30" height="30" alt="" align="center"></a></strong></p></li></ul>
-			<ul><li><p><strong>TSMC Fab Tour&nbsp;&nbsp;<a href="https://www.youtube.com/watch?v=divOKxuYklM"><img src="video_icon.png" width="30" height="30" alt="" align="center"></a></strong></p></li></ul>	
-	  </td>
-	 </tr>
+	<font size="+1" face="Arial, Helvetica, sans-serif">Team 1 - ARIA</font><br><br>
+	<font size="+0" face="Arial, Helvetica, sans-serif"> 
+This design accelerates ML inference using a custom RISC-V architecture with vector extensions. It features a five-stage CPU core where a scheduler maximizes throughput by parallelizing vector instructions. The system relies on compiler optimizations to reduce hardware complexity while supporting multi-precision arithmetic and a hierarchical memory structure.
+<br><br> <img src="Layout_team1.PNG" width="640" height="640" alt=""/><br><br>
 
-    <tr>
-      	<td>  <center>
-      	<strong>13 Oct</strong>
-      	</center><br>  
-		</td>
-      	<td><br>
-<!---
-		<center><strong>Lecture 5 - Delays in VLSI Circuits</strong>
-		</center><br> 
-		  	<center><a href="5 - Delays (slides).pdf"><img src="slides_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;			
-			<a href="5 - Delays (notes).pdf"><img src="notes_icon.jpg" width="35" height="35" alt=""></a>&nbsp;
-			<a href=""><img src="tape_icon.jpg" width="40" height="35" alt=""></a>&nbsp;&nbsp;(1st half)
-			</center><br>
---->
-			<center><strong>Lecture 5 - Combinational Circuits</strong>
-			</center><br> 
-		  	<center><a href="5 - Combinational Circuits (slides).pdf"><img src="slides_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;
-			<a href="5 - Combinational Circuits (notes).pdf"><img src="notes_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;
-			<a href="https://imperial.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f307460d-9f17-4d05-8157-b37000c60986"><img src="tape_icon.jpg" width="40" height="35" alt=""></a>&nbsp;&nbsp;(2nd half)
-			</center><br>
-			<center><strong>Lab 2 (part 2) - Editing Layout</strong>&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="https://github.com/ELEC70142-VLSI-Coursework/Lab_2"><img src="github_icon.png" width="40" height="40" alt=""></a>&nbsp;&nbsp;
-			</center><br>
-	  </td>
-      	<td>
-			<ul><li><p><strong>VSClib Standard Cell Library&nbsp;&nbsp;<a href="https://www.vlsitechnology.org/html/cells/vsclib013/lib_gif_index.html"><img src="weblink_icon.png" width="30" height="30" alt="" align="center"></a></strong></p></li></ul>
-			<ul><li><p><strong>VLSI Technology - Logical Effort Review&nbsp;&nbsp;<a href="https://www.vlsitechnology.org/html/le_iv1.html"><img src="weblink_icon.png" width="30" height="30" alt="" align="center"></a></strong></p></li></ul>			
-	  </td>
-	 </tr>
+	<font size="+1" face="Arial, Helvetica, sans-serif">Team 2 - NAND Technology</font><br><br>
+	<font size="+0" face="Arial, Helvetica, sans-serif"> 
+This project implements a custom RV32IMF RISC-V processor featuring a dedicated IEEE 754 FPU and hardware-accelerated AES-128 encryption. It integrates peripherals like UART and GPIO via a Wishbone bus, supported by  dual-port memory and a JTAG interface for programming and debugging.
+<br><br> <img src="Layout_team2.PNG" width="640" height="640" alt=""/><br><br>
 
-	  <tr>
-      	<td>  <center>
-      	<strong> 20 Oct</strong>
-      	</center><br>  
-		</td>
-      	<td><br>
-
-		<center><strong>Lecture 6 - Sequential Circuits</strong>
-		</center><br> 
-		  	<center><a href="6 - Sequential Circuits (slides).pdf"><img src="slides_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;			
-			<a href="6 - Sequential Circuits (notes).pdf"><img src="notes_icon.jpg" width="35" height="35" alt=""></a>&nbsp;
-			<a href="https://imperial.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=378dffb1-1257-4537-af44-b37000c60a4a"><img src="tape_icon.jpg" width="40" height="35" alt=""></a>&nbsp;&nbsp;
-			</center><br>
-<!---
-			<center><strong>Lecture 7 - Array Subsystems</strong>
-			</center><br> 
-		  	<center><a href="7 - Arrays (slides).pdf"><img src="slides_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;
-<!---
-			<a href="7 - Arrays (notes).pdf"><img src="notes_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;
-
-			<a href=""><img src="tape_icon.jpg" width="40" height="35" alt=""></a>&nbsp;&nbsp;(2nd half)
-			</center><br>
---->
-			<center><strong>Lab 3 - Memory and Standard Cells</strong>&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="https://github.com/ELEC70142-VLSI-Coursework/Lab_3"><img src="github_icon.png" width="40" height="40" alt=""></a>&nbsp;&nbsp;
-			</center><br>
-	  </td>
-      	<td>
-
-		</td>
-	 </tr>
-
-	  <tr>
-      	<td>  <center>
-      	<strong>27 Oct</strong>
-      	</center><br>  
-		</td>
-      	<td><br>
-			<center><strong>Lecture 7 - Array Subsystems</strong>
-			</center><br> 
-		  	<center><a href="7 - Arrays (slides).pdf"><img src="slides_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;
-			<a href="7 - Arrays (notes).pdf"><img src="notes_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;
-			<a href="https://imperial.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=d7afd46f-55af-4936-a6cc-b37000c60b71"><img src="tape_icon.jpg" width="40" height="35" alt=""></a>&nbsp;&nbsp;
-			</center><br>
-
-			<center><strong>Lab 4 - Memory Self-test</strong>&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="https://github.com/ELEC70142-VLSI-Coursework/Lab_4"><img src="github_icon.png" width="40" height="40" alt=""></a>&nbsp;&nbsp;
-			</center><br>
-	  </td>
-      	<td>
-
-		</td>
-	 </tr>
-	
-	  <tr>
-      	<td>  <center>
-      	<strong>3 Nov</strong>
-      	</center><br>  
-		</td>
-      	<td><br>
-			<center><strong>Chip Design Project Briefing</strong>
-			</center><br> 
-		  	<center><a href="Chip Design Project Briefing.pdf"><img src="slides_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;
-			<a href="https://imperial.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=304cdbd3-494b-432e-b040-b37000c60c57"><img src="tape_icon.jpg" width="40" height="35" alt=""></a>&nbsp;&nbsp;
-			</center><br>
-	  </td>
-      	<td>
-
-		</td>
-	 </tr>
-	  
-	  <tr>
-      	<td>  <center>
-      	<strong>10 Nov</strong>
-      	</center><br>  
-		</td>
-      	<td><br>
-			<center><strong>Lecture 8 - Chip Testing</strong>
-			</center><br> 
-		  	<center><a href="8 - VLSI chip testing (slides).pdf"><img src="slides_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;
-			<a href="8 - VLSI chip testing (notes).pdf"><img src="notes_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;
-			<a href="https://imperial.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=745bbde0-630c-48c7-9659-b37000c60d2a"><img src="tape_icon.jpg" width="40" height="35" alt=""></a>&nbsp;&nbsp;1st half
-			</center><br>
-
-			<center><strong>Lecture 9 - Design for Testability</strong>
-			</center><br> 
-		  	<center><a href="9 - Design for Testability (slides).pdf"><img src="slides_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;
-			<a href="9 - Design for Testability (notes).pdf"><img src="notes_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;
-			<a href="https://imperial.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=745bbde0-630c-48c7-9659-b37000c60d2a"><img src="tape_icon.jpg" width="40" height="35" alt=""></a>&nbsp;&nbsp;2nd half
-			</center><br>
-
-			<center><strong>Lab 5 - Scan Chain Insertion, Logic Equivalence Check, and Power Estimation</strong>&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="https://github.com/ELEC70142-VLSI-Coursework/Lab_5"><img src="github_icon.png" width="40" height="40" alt=""></a>&nbsp;&nbsp;
-			</center><br>
-
-	  </td>
-      	<td>
-			<ul><li><p><strong>Project Teams&nbsp;&nbsp;<a href="Project Teams.pdf"><img src="pdf_icon.png" width="30" height="30" alt="" align="center"></a></strong></p></li></ul>
-		</td>
-	 </tr>
-	
-	  <tr>
-      	<td>  <center>
-      	<strong>19 Nov</strong>
-      	</center><br>  
-		</td>
-      	<td><br>
-			<center><strong>The Tapeout Process<br>
-				by Jason Meredith and Mostafa<br>
-				Apple Inc. (UK)</strong>
-			</center><br> 
-	  </td>
-      	<td>
-
-		</td>
-	 </tr>
-	  	  
-	  <tr>
-      	<td>  <center>
-      	<strong>27 Nov</strong>
-      	</center><br>  
-		</td>
-      	<td><br>
-			<center><strong>Lecture 10 - VLSI Delays</strong>
-			</center><br> 
-		  	<center><a href="10 - Delays (slides).pdf"><img src="slides_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;
-			<a href="10 - Delays (notes).pdf"><img src="notes_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;
-			<a href="https://imperial.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=fc8d8650-bb87-4348-94ec-b39b00c61fdd"><img src="tape_icon.jpg" width="40" height="35" alt=""></a>&nbsp;&nbsp;1st half
-			</center><br>
-
-			<center><strong>Lecture 11 - VLSI Interconnects</strong>
-			</center><br> 
-		  	<center><a href="11 - Interconnect (slides).pdf"><img src="slides_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;
-			<a href="11 - Interconnect (notes).pdf"><img src="notes_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;
-			<a href="https://imperial.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=fc8d8650-bb87-4348-94ec-b39b00c61fdd"><img src="tape_icon.jpg" width="40" height="35" alt=""></a>&nbsp;&nbsp;2nd half
-			</center><br>
-
-	  </td>
-      	<td>
-
-		</td>
-	 </tr>
-
-	  <tr>
-      	<td>  <center>
-      	<strong>3 Dec</strong>
-      	</center><br>  
-		</td>
-      	<td><br>
-			<center><strong>Lecture 12 - Reliability &amp; Variations</strong>
-			</center><br> 
-		  	<center><a href="12 - Reliability & Variations (slides).pdf"><img src="slides_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;
-			<a href="12 - Reliability & Variations (notes).pdf"><img src="notes_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;
-			<a href="https://imperial.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=701c97dd-e906-4ce9-aa09-b3a5004abe78"><img src="tape_icon.jpg" width="40" height="35" alt=""></a>&nbsp;&nbsp;1st half
-			</center><br>
-
-			<center><strong>Lecture 13 - Packaging, Power and Clock</strong>
-			</center><br> 
-		  	<center><a href="13 - Packaging Power & Clock (slides).pdf"><img src="slides_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;
-			<a href="https://imperial.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=701c97dd-e906-4ce9-aa09-b3a5004abe78"><img src="tape_icon.jpg" width="40" height="35" alt=""></a>&nbsp;&nbsp;2nd half
-			</center><br>
-			
-			<center><strong>Project Templates &amp; Deliverables</strong>&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="https://github.com/ELEC70142-VLSI-Coursework/Project-Template"><img src="github_icon.png" width="40" height="40" alt=""></a>&nbsp;&nbsp;
-			</center><br>
-	  </td>
-		  
-	<td>
-    	<div align="center"><br>
-      	<p><font face="Arial, Helvetica, sans-serif">Module Evaluation Survey&nbsp;&nbsp;<a href="https://forms.cloud.microsoft/e/VEsmsf1hkS"><img src="survey_icon.png" width="35" height="35" alt=""></a>&nbsp;&nbsp;</font></p><br>
-    	</div>
-	</td>
-
-	 </tr>
-	</tbody>
-</table>
-<br>
-<strong>&nbsp;Where you can find useful documents on Cadence &amp; TSMC (for internal use only). &nbsp;&nbsp;&nbsp;&nbsp;<a href="document_locations.pdf"><img src="pdf_icon.png" width="35" height="35" alt=""></a></strong>
-<br>
-<br>	
-
-<!---
-			<center><strong>Lecture 8 - VLSI Testing</strong>
-			</center><br> 
-		  	<center><a href="8 - VLSI chip testing (slides).pdf"><img src="slides_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;
-			<a href="8 - VLSI chip testing (notes).pdf"><img src="notes_icon.jpg" width="35" height="35" alt=""></a>&nbsp;&nbsp;
-			<a href=""><img src="tape_icon.jpg" width="40" height="35" alt=""></a>&nbsp;&nbsp;(2nd half)
-			</center><br>
-
-<table width="600" border="2">
-  <tbody>
-    <tr>
-      <th scope="col" width="80" align="center">Category</th>
-      <th scope="col" width="250" align="center">Location&nbsp;</th>
-	</tr>
-    <tr>
-      	<td>  <center><strong>Genus</strong></center><br> </td>
-		<td> 
-			<ul><li><p><strong>User Guide &nbsp;&nbsp; <a href="/usr/local/cadence/GENUS_18.10.000/doc/genus_user/genus_user.pdf"><img src="pdf_icon.png" width="35" height="35" alt=""></a></strong></p></li></ul>
-			<ul><li><p><strong>Starter Guide &nbsp;&nbsp; <a href="/usr/local/cadence/GENUS_18.10.000/doc/genus_start/genus_start.pdf"><img src="pdf_icon.png" width="35" height="35" alt=""></a></strong></p></li></ul>
-			<ul><li><p><strong>DFT User Guide &nbsp;&nbsp; <a href="/usr/local/cadence/GENUS_18.10.000/doc/genus_dftuser/genus_dftuser.pdf"><img src="pdf_icon.png" width="35" height="35" alt=""></a></strong></p></li></ul>
-			<ul><li><p><strong>Command Reference &nbsp;&nbsp; <a href="/usr/local/cadence/GENUS_18.10.000/doc/genus_comref/genus_comref.pdf"><img src="pdf_icon.png" width="35" height="35" alt=""></a></strong></p></li></ul>
-			<ul><li><p><strong>Attribute Reference &nbsp;&nbsp; <a href="/usr/local/cadence/GENUS_18.10.000/doc/genus_attref/genus_attref.pdf"><img src="pdf_icon.png" width="35" height="35" alt=""></a></strong></p></li></ul>
-		</td>
-	</tr>
-	
-	<tr>
-      	<td>  <center><strong>Innovus</strong></center><br> </td>
-		<td> 
-			<ul><li><p><strong>User Guide &nbsp;&nbsp; <a href="/usr/local/cadence/INNOVUS_18.10.000/doc/innovusUG/innovusUG.pdf"><img src="pdf_icon.png" width="35" height="35" alt=""></a></strong></p></li></ul>
-			<ul><li><p><strong>Command Reference &nbsp;&nbsp; <a href="/usr/local/cadence/INNOVUS_18.10.000/doc/innovusTCR/innovusTCR.pdf"><img src="pdf_icon.png" width="35" height="35" alt=""></a></strong></p></li></ul>
-		</td>
-	</tr>
-
-	<tr>
-      	<td>  <center><strong>TSMC PDK</strong></center><br> </td>
-		<td> 
-			<ul><li><p><strong>Standard Cell Library Datasheet &nbsp;&nbsp; <a href="/usr/local/cadence/kits/tsmc/beLibs/65nm/TSMCHOME/digital/Documentation/documents/tcbn65lpbwp7t_141a"><img src="weblink_icon.png" width="35" height="35" alt=""></a></strong></p></li></ul>
-			<ul><li><p><strong>Standard Cell Application Note &nbsp;&nbsp; <a href="/usr/local/cadence/kits/tsmc/65n_LP/doc/LIBS/TSMC N28 and above Standard Cell Application Note_3_2.pdf"><img src="pdf_icon.png" width="35" height="35" alt=""></a></strong></p></li></ul>
-			<ul><li><p><strong>SRAM Documentation &nbsp;&nbsp; <a href="/usr/local/cadence/kits/tsmc/beLibs/65nm/TSMCHOME/sram/Documentation/documents"><img src="weblink_icon.png" width="35" height="35" alt=""></a></strong></p></li></ul>
-		</td>
-	</tr>
-	</tbody>
-	</table>
---->
-
+	<font size="+1" face="Arial, Helvetica, sans-serif">Team 3 - Hash Brown</font><br><br>
+	<font size="+0" face="Arial, Helvetica, sans-serif"> 
+Hash Brown is a 250 MHz Harvard Architecture SoC pairing a custom RV32I core with a hardware SHA-256 accelerator. It utilizes an AHB bus to connect tightly-coupled instruction and data memories, plus UART and SPI interfaces, designed to accelerate software-based cryptographic processing.
+<br><br> <img src="Layout_team3.PNG" width="640" height="640" alt=""/><br><br>		
+		
+	<font size="+1" face="Arial, Helvetica, sans-serif">Team 4 - MOSAIC</font><br><br>
+	<font size="+0" face="Arial, Helvetica, sans-serif"> 
+MOSAIC is an edge-AI SoC pairing a PicoRV32 RISC-V CPU with a configurable matrix-multiplication accelerator. Designed for efficient preprocessing, it utilizes a unified 8 KB SRAM and DMA-driven architecture to minimize data movement and CPU overhead during small-scale linear algebra workloads.
+<br><br> <img src="Layout_team4.PNG" width="640" height="640" alt=""/><br><br>			
+		
+	<font size="+1" face="Arial, Helvetica, sans-serif">Team 5 - HENRY</font><br><br>
+	<font size="+0" face="Arial, Helvetica, sans-serif"> 
+This project implements a custom CNN Accelerator for MNIST digit classification capable of processing 28x28 grayscale images. It features a hardware-optimized inference pipeline with dual parallel processing engines.<br><br> <img src="Layout_team5.PNG" width="640" height="640" alt=""/><br><br>	
+		
+	<font size="+1" face="Arial, Helvetica, sans-serif">Team 6 - Cryptonite</font><br><br>
+	<font size="+0" face="Arial, Helvetica, sans-serif"> 
+Cryptonite is a secure RISC-V SoC that integrates a hardware AES-128 accelerator to encrypt instruction memory and decrypt it on-the-fly. A custom fetch controller manages key injection, stalls the CPU during decryption, and wipes plaintext memory, ensuring strict code confidentiality and protection against unauthorized access.
+<br><br> <img src="Layout_team6.PNG" width="640" height="640" alt=""/><br><br>	
+		
+	<font size="+1" face="Arial, Helvetica, sans-serif">Team 7 - N-body Gravity Simulation Engine</font><br><br>
+	<font size="+0" face="Arial, Helvetica, sans-serif"> 
+This ASIC accelerates 3D N-body gravity simulations by offloading O(n^2) pairwise force calculations to a custom hardware design.  It utilizes a tile-based processor architecture backed by on-chip SRAM to compute particle interactions in parallel, streaming updated coordinates via SPI for real-time visualization.
+<br><br> <img src="Layout_team7.PNG" width="640" height="640" alt=""/><br><br>
+		
+	<font size="+1" face="Arial, Helvetica, sans-serif">Team 8 - GEMM</font><br><br>
+	<font size="+0" face="Arial, Helvetica, sans-serif"> 
+This project implements a hardware-software codesign for General Matrix Multiply (GEMM) using a fixed-size systolic array. It features a Wishbone-connected accelerator that processes tiled sub-matrices, backed by on-chip SRAM and a host CPU to manage arbitrary matrix sizes via firmware.
+<br><br> <img src="Layout_team8.PNG" width="640" height="640" alt=""/><br><br>
+		
 <hr>
 <font size="-1" face="Arial, Helvetica, sans-serif"><i>This page is maintained by Peter Cheung</i> 
 <br>
-<i>Last updated: 4 Dec 2025</i></font>
+<i>Last updated: 11 June 2026</i></font>
 </body>
 </html>
