@@ -25,48 +25,49 @@ Available silicon area is 1mm x 1mm in a 44 pin JLCC packaging. All chips were d
 The following provides a brief description and the layout for each design.
 All eight designs have been taped out at the end of February via EuroPractice/IMEC. The fabricated chips are returned to us at the beginning of June for testing.  </p></font><br><br>
 
-	<font size="+1" face="Arial, Helvetica, sans-serif">Team 1 - ARIA</font><br><br>
+	<font size="+1" face="Arial, Helvetica, sans-serif"><b>Team 1 - ARIA</b></font><br><br>
 	<font size="+0" face="Arial, Helvetica, sans-serif"> 
 This design accelerates ML inference using a custom RISC-V architecture with vector extensions. It features a five-stage CPU core where a scheduler maximizes throughput by parallelizing vector instructions. The system relies on compiler optimizations to reduce hardware complexity while supporting multi-precision arithmetic and a hierarchical memory structure.
-<br><br> <img src="Layout_team1.PNG" width="640" height="640" alt=""/><br><br>
+</font><br><br> <img src="Layout_team1.PNG" width="640" height="640" alt=""/><br><br>
 
-	<font size="+1" face="Arial, Helvetica, sans-serif">Team 2 - NAND Technology</font><br><br>
+	<font size="+1" face="Arial, Helvetica, sans-serif"><b>Team 2 - NAND Technology</b></font><br><br>
 	<font size="+0" face="Arial, Helvetica, sans-serif"> 
 This project implements a custom RV32IMF RISC-V processor featuring a dedicated IEEE 754 FPU and hardware-accelerated AES-128 encryption. It integrates peripherals like UART and GPIO via a Wishbone bus, supported by  dual-port memory and a JTAG interface for programming and debugging.
-<br><br> <img src="Layout_team2.PNG" width="640" height="640" alt=""/><br><br>
+</font><br><br> <img src="Layout_team2.PNG" width="640" height="640" alt=""/><br><br>
 
-	<font size="+1" face="Arial, Helvetica, sans-serif">Team 3 - Hash Brown</font><br><br>
+	<font size="+1" face="Arial, Helvetica, sans-serif"><b>Team 3 - Hash Brown</b></font><br><br>
 	<font size="+0" face="Arial, Helvetica, sans-serif"> 
 Hash Brown is a 250 MHz Harvard Architecture SoC pairing a custom RV32I core with a hardware SHA-256 accelerator. It utilizes an AHB bus to connect tightly-coupled instruction and data memories, plus UART and SPI interfaces, designed to accelerate software-based cryptographic processing.
-<br><br> <img src="Layout_team3.PNG" width="640" height="640" alt=""/><br><br>		
+</font><br><br> <img src="Layout_team3.PNG" width="640" height="640" alt=""/><br><br>		
 		
-	<font size="+1" face="Arial, Helvetica, sans-serif">Team 4 - MOSAIC</font><br><br>
+	<font size="+1" face="Arial, Helvetica, sans-serif"><b>Team 4 - MOSAIC</b></font><br><br>
 	<font size="+0" face="Arial, Helvetica, sans-serif"> 
 MOSAIC is an edge-AI SoC pairing a PicoRV32 RISC-V CPU with a configurable matrix-multiplication accelerator. Designed for efficient preprocessing, it utilizes a unified 8 KB SRAM and DMA-driven architecture to minimize data movement and CPU overhead during small-scale linear algebra workloads.
-<br><br> <img src="Layout_team4.PNG" width="640" height="640" alt=""/><br><br>			
+</font><br><br> <img src="Layout_team4.PNG" width="640" height="640" alt=""/><br><br>			
 		
-	<font size="+1" face="Arial, Helvetica, sans-serif">Team 5 - HENRY</font><br><br>
+	<font size="+1" face="Arial, Helvetica, sans-serif"><b>Team 5 - HENRY</b></font><br><br>
 	<font size="+0" face="Arial, Helvetica, sans-serif"> 
-This project implements a custom CNN Accelerator for MNIST digit classification capable of processing 28x28 grayscale images. It features a hardware-optimized inference pipeline with dual parallel processing engines.<br><br> <img src="Layout_team5.PNG" width="640" height="640" alt=""/><br><br>	
+This project implements a custom CNN Accelerator for MNIST digit classification capable of processing 28x28 grayscale images. It features a hardware-optimized inference pipeline with dual parallel processing engines.
+		</font><br><br> <img src="Layout_team5.PNG" width="640" height="640" alt=""/><br><br>	
 		
-	<font size="+1" face="Arial, Helvetica, sans-serif">Team 6 - Cryptonite</font><br><br>
+	<font size="+1" face="Arial, Helvetica, sans-serif"><b>Team 6 - Cryptonite</b></font><br><br>
 	<font size="+0" face="Arial, Helvetica, sans-serif"> 
 Cryptonite is a secure RISC-V SoC that integrates a hardware AES-128 accelerator to encrypt instruction memory and decrypt it on-the-fly. A custom fetch controller manages key injection, stalls the CPU during decryption, and wipes plaintext memory, ensuring strict code confidentiality and protection against unauthorized access.
-<br><br> <img src="Layout_team6.PNG" width="640" height="640" alt=""/><br><br>	
+</font><br><br> <img src="Layout_team6.PNG" width="640" height="640" alt=""/><br><br>	
 		
-	<font size="+1" face="Arial, Helvetica, sans-serif">Team 7 - N-body Gravity Simulation Engine</font><br><br>
+	<font size="+1" face="Arial, Helvetica, sans-serif"><b>Team 7 - N-body Gravity Simulation Engine</b></font><br><br>
 	<font size="+0" face="Arial, Helvetica, sans-serif"> 
 This ASIC accelerates 3D N-body gravity simulations by offloading O(n^2) pairwise force calculations to a custom hardware design.  It utilizes a tile-based processor architecture backed by on-chip SRAM to compute particle interactions in parallel, streaming updated coordinates via SPI for real-time visualization.
-<br><br> <img src="Layout_team7.PNG" width="640" height="640" alt=""/><br><br>
+</font><br><br> <img src="Layout_team7.PNG" width="640" height="640" alt=""/><br><br>
 		
-	<font size="+1" face="Arial, Helvetica, sans-serif">Team 8 - GEMM</font><br><br>
+	<font size="+1" face="Arial, Helvetica, sans-serif"><b>Team 8 - GEMM</b></font><br><br>
 	<font size="+0" face="Arial, Helvetica, sans-serif"> 
 This project implements a hardware-software codesign for General Matrix Multiply (GEMM) using a fixed-size systolic array. It features a Wishbone-connected accelerator that processes tiled sub-matrices, backed by on-chip SRAM and a host CPU to manage arbitrary matrix sizes via firmware.
-<br><br> <img src="Layout_team8.PNG" width="640" height="640" alt=""/><br><br>
+		</font><br><br> <img src="Layout_team8.PNG" width="640" height="640" alt=""/><br><br>
 		
 <hr>
 <font size="-1" face="Arial, Helvetica, sans-serif"><i>This page is maintained by Peter Cheung</i> 
 <br>
-<i>Last updated: 15 June 2026</i></font>
+<i>Last updated: 16 June 2026</i></font>
 </body>
 </html>
